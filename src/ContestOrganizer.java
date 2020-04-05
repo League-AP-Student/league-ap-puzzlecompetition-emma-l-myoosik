@@ -17,6 +17,15 @@ public class ContestOrganizer {
 	 * @param arr the array to be sorted.*/
 	public void sort(Contestant[] arr){
 		/* code goes here */
+		for (int i = 0; i < arr.length - 2; i++) {
+			if (arr[i + 1].getScore() < arr[i].getScore()) {
+				int temp = arr[i].getScore();
+				arr[i].setScore(arr[i + 1].getScore());
+				arr[i + 1].setScore(temp);
+			}
+			
+			
+		}
 	}
 	
 	/** Sorts each row of contestants into increasing order by score.
